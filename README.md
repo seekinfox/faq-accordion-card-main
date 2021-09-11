@@ -9,7 +9,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-- [Author](#author)
 
 ### The challenge
 
@@ -28,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github@seekinfox-repository](https://github.com/seekinfox/faq-accordion-card-main)
-- Live Site URL: [gitgub@sekinfox-live-page](https://seekinfox.github.io/faq-accordion-card-main/)
+- Live Site URL: [github@seekinfox-live-page](https://seekinfox.github.io/faq-accordion-card-main/)
 
 
 ### Built with
@@ -41,4 +40,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@seeinfox](https://www.frontendmentor.io/profile/seekinfox)
+- Frontend Mentor - [@seekinfox](https://www.frontendmentor.io/profile/seekinfox)
