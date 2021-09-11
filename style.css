@@ -1,126 +1,202 @@
-html,
-body {
+* {
     margin: 0;
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--Very-dark-desaturated-blue);
-    
-    background: url("https://raw.githubusercontent.com/seekinfox/Profile-card/6a89cd2637b32da709d89df781e1392c965812f6/images/bg-pattern-top.svg"), url("https://raw.githubusercontent.com/seekinfox/Profile-card/c35be496163bd9c0ddea7dd1e57b711fca795e04/images/bg-pattern-bottom.svg"),  hsla(273, 56%, 21%,0.9);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 90%, 90%;
-    background-position: top -46rem left -34rem , bottom -56rem right -29rem;
-}
-
-:root {
-    --Dark-cyan: hsl(185, 75%, 39%);
-    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
-    --Dark-grayish-blue: hsl(227, 10%, 46%);
-    --Dark-gray: hsl(0, 0%, 79%);
-}
-
-
-#main-card {
-    background: white;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
-    position: absolute;
-    width: 21rem;
+}
+:root {
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+html, body {
+    
+    height: 900px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    background: linear-gradient(to bottom, var(--Soft-violet), var(--Soft-blue));
+    color: var( --Very-dark-grayish-blue);
 }
 
-#head-background {
-    background: url('https://raw.githubusercontent.com/seekinfox/Profile-card/c047ca97f89fe959bd561b7da143d4e4812fe03f/images/bg-pattern-card.svg');
-    position: relative;
-    width: 100%;
-    height: 8.5rem;
-    border-radius: 20px 20px 0 0;
-}
-
-#hero {
-    top: 5.5rem;
-    width: 100%;
-    text-align: center;
+.main-card {
     position: absolute;
-}
-#hero img {
-   border-radius: 50%;
-    box-shadow: 0px 0px 0px 6px white;
-}
-#info {
-    box-sizing: border-box;
-    padding-top: 3.2rem;
-    text-align: center;
-    width: 100%;
-    border-bottom: 0.1px solid var(--Dark-gray);
-}
-
-p#country {
-margin-top: 0.4rem;
-    margin-bottom: 1.5rem;
-}
-
-#stats {
-    box-sizing: border-box;
-    width: 90%;
-
+    background-color: white;
+    position: relative;
+    -moz-box-sizing: border-box;  
+    width: 26.9rem;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 40px rgb(113, 6, 207);
 }
 
-.stat {
 
-    text-align: center;
-
+.hero {
+    position: absolute;
+    top: -9rem;
+    left: 1.2rem;
 }
 
-p {
-    font-weight: 400;
 
+/*
+img {
+    width: 16.1rem ;
+}
+*/
+.desktop-faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-p.bold {
-    margin: auto;
-    font-size: 18px;
+.section-faq {
+    
+    width: 86%;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+.faq {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    cursor: pointer;
+}
+.header {
+    padding: 1rem 1rem 2rem 1rem ;
+    
+}
+h2.title {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 2.5rem;
+}
+
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.question h3 {
+    font-weight: 100;
+}
+.faq.active h3 {
     font-weight: 700;
 }
 
-#info p.bold {
-    padding-top: 1.5rem;
-}
-
-.grayblue {
-    
-    padding-bottom: 1rem;
-    margin: auto;
-    font-weight: 400;
-    color: var(--Dark-grayish-blue);
-}
-
-.small {
-
-    font-size: 14px;
-}
-.small1 {
-    font-size: 11px;
-}
-
-.stat p.bold {
-    padding-top: 1.5rem;
-    padding-bottom: 0.5rem;
-}
-
-@media (max-width: 500px) {
-    html, body {
-        background-size: 113%, 113%;
-        background-position: top -10rem left -15rem,bottom -10rem right -15rem;
+@keyframes fade {
+    0% {
+        opacity: 0;
     }
+    100% {
+        opacity: 1;
+    }
+}
+
+.answer {
+    padding-right: 2rem;
+    color: var(--Dark-grayish-blue);
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.2s;
+
+}
+.faq.active .answer {
+/*   in progress */
+    animation: fade 0.5s linear;
+    max-height: 100px;
+    transition: max-height 0.2s;
+}
+.faq.active svg {
+    transform: rotate(180deg);
+}
+h3:hover {
+    color: var(--Soft-red);
+}
+.box img {
+    display: none;
+}
+
+@media (min-width: 1100px) {
+    body, html {
+        margin:0;
+        padding:0;
+        height: 100%
+    }
+    .main-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 75rem;
+        position: relative;
+    }
+    .hero img, .hero-shadow img {
+        display: none;
+    }
+    
+    .box img {
+        display: block;
+        position: absolute;
+        top: 39%;
+        left: -21%
+    }
+    
+    .hero
+    {
+        position: absolute;
+        top: -0.3rem;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        background: url("https://raw.githubusercontent.com/seekinfox/faq-accordion-card-main/main/images/illustration-woman-online-desktop.svg")    ;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: left -6.5rem center;
+       
+        
+    }
+    
+    .hero-shadow {
+        width: 50%;
+        position: absolute;
+        left: 0;    
+        height: 100%;
+        background: url("https://raw.githubusercontent.com/seekinfox/faq-accordion-card-main/main/images/bg-pattern-desktop.svg");
+        background-size: 200% 200%;
+        background-position: left -44rem  top -25.5rem;
+        background-repeat: no-repeat;
+    }    
+    .section-faq {
+        padding:0;
+        width: 77%;
+        margin-bottom: 5rem;
+    }
+    
+    .desktop-faq {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3.5rem;
+        padding-left: 38.5rem;
+    }
+    
+    h2 { 
+        padding:0.4rem;
+        width: 27rem;
+    }
+    
+    
 }

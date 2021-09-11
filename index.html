@@ -7,58 +7,144 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <!-- font family links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <title>Frontend Mentor | Profile card component</title>
+    <!-- fontfamily end -->
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+
 </head>
 
 <body>
-   
-    <div id="main-card">
-
-        <div id="head-background">
-                      
-               <div id="hero">
-                <img src="https://github.com/seekinfox/Profile-card/blob/main/images/image-hero.jpg?raw=true" alt="seekinfox-profile">
-            </div>
-        </div>
-        <div id="info">
-            <p class="bold">Seekin-fox  <span class="grayblue">22</span></p>
-            <p id="country" class="small">India</p>
-        </div>
-        <div id="stats">
-            <div class="stat">
-                <p class="bold">
-                    <!--find bold-->
-                    80K
-                </p>
-                <p class="grayblue small small1">
-                    Followers
-                </p>
-            </div>
-            <div class="stat">
-                <p class="bold">
-                    803K
-                </p>
-                <p class="grayblue small small1">
-                    Likes
-                </p>
-            </div>
-            <div class="stat">
-                <p class="bold">
-                    1.4K
-                </p>
-                <p class="grayblue small small1">
-                    Photos
-                </p>
-            </div>
-        </div>
-    </div>
 
 
-    <!-- <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">seekinfox</a>.
-    </div>-->
-</body></html>
+    <section class="main-card">
+<!--       in progress for a box positio absolute-->
+        <div class="hero">
+            <img src="https://raw.githubusercontent.com/seekinfox/faq-accordion-card-main/cf5f408c82fe94b9f3bb46ff7a3a0cf21e0f041c/images/illustration-woman-online-mobile.svg" alt="">
+            <div class="box">
+                <img src="https://raw.githubusercontent.com/seekinfox/faq-accordion-card-main/main/images/illustration-box-desktop.svg" alt="">
+            </div>
+
+        </div>
+        <div class="hero-shadow">
+            <img src="https://raw.githubusercontent.com/seekinfox/faq-accordion-card-main/cf5f408c82fe94b9f3bb46ff7a3a0cf21e0f041c/images/bg-pattern-mobile.svg" alt="">
+        </div>
+        <div class="desktop-faq">
+        <div class="header">
+            <h2 class="title">
+                FAQ
+            </h2>
+        </div>
+
+        <!--    faq section strats-->
+        <section class="section-faq">
+            <div class="faq">
+                <div class="question">
+                    <h3>
+                        How many team members can I invite?
+                    </h3>
+                    <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                    </svg>
+
+                </div>
+                <div class="answer">
+
+                    <p>
+                        You can invite up to 2 additional users on the Free plan. There is no limit on
+                        team members for the Premium plan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                    <h3>
+                        What is the maximum file upload size?
+                    </h3>
+                    <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                    </svg>
+
+                </div>
+                <div class="answer">
+
+                    <p>
+                        No more than 2GB. All files in your account must fit your allotted storage space.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                    <h3>
+                        How do I reset my password? </h3>
+                    <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                    </svg>
+
+                </div>
+                <div class="answer">
+
+                    <p>
+                        Click “Forgot password” from the login page or “Change password” from your profile page.
+                        A reset link will be emailed to you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                    <h3>
+                        Can I cancel my subscription?
+                    </h3>
+                    <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                    </svg>
+
+                </div>
+                <div class="answer">
+
+                    <p>
+                        Yes! Send us a message and we’ll process your request no questions asked.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq">
+                <div class="question">
+                    <h3>
+                        Do you provide additional support?
+                    </h3>
+                    <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+                    </svg>
+
+                </div>
+                <div class="answer">
+
+                    <p>
+                        Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+        </div>
+        
+    </section>
+    <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+-->
+</body>
+
+</html>
